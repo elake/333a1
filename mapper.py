@@ -45,3 +45,9 @@ while True:
         xord.append(ord(fc))
     else:
         break
+
+pskeys = [i for i in range(48, 58, 1)]
+for i in range(65, 91, 1):
+    pskeys.append(i)
+for i in range(97, 123, 1)
+
