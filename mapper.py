@@ -2,14 +2,46 @@ map = [[0x7, 0x5, 0x0, 0x4, 0x2, 0x3, 0xb, 0x6, 0xa, 0x8, 0x9, 0xd, 0xc, 0xf, 0x
 
 def check(c, k, map):
     for i in range(16):
-        if map[i][int(k)] == int(c):
-            return i
-def listchecker(c, k, map):
+        if map[0][i] == k:
+            x = i
+
+    for i in range(16):
+        if map[i][x] == c:
+            return map[i][0]
+
+def lobcheck(c, k, map):
+    """
+    Takes two lists of integers (use ord to convert bytes to integers)
+    and checks if k is the key for c.
+    """
     rval = []
-    while len(c) > 0:
+    ii = 0
+    while ii < len(c):
         for i in range(len(k)):
-            cur = c.pop()
-            x0 = check(cur[0], k[i][1], map)
-            x1 = check(cur[1], k[i][0], map)
-            rval.insert(0, str(x0)+str(x1))
+            cur = c[ii]
+            ii += 1
+            xlow = check(cur % 16, k[i] >> 4, map)
+            xhigh = check(cur >> 4, k[i] % 16, map)
+            rval.insert(0, (xhigh << 4) + xlow)
     return rval
+
+def brute(c, kl, map):
+    """
+    Takes a list of keys (keys are also lists) and tries all of the keys
+    
+    >>> brute([162, 187, 42], [[67, 66, 65], [55, 43, 44]], map)
+    [67, 66, 65]
+    """
+
+    for k in kl:
+        if max(lobcheck(c, k, map)) <= 127:
+            return k
+
+xord = []
+f = open("ciphertext1", "rb")
+while True:
+    fc = f.read(1)
+    if fc:
+        xord.append(ord(fc))
+    else:
+        break
