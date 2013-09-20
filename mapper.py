@@ -3,6 +3,11 @@ map = [[0x7, 0x5, 0x0, 0x4, 0x2, 0x3, 0xb, 0x6, 0xa, 0x8, 0x9, 0xd, 0xc, 0xf, 0x
 def check(c, k, map):
     """
     Decrypts a single hex digit (4 bits).
+    
+    >>> check(7, 10, map)
+    3
+    >>> check(0x7, 0xa, map)
+    3
     """
     for i in range(len(map)):
         if map[0][i] == k:
@@ -14,15 +19,11 @@ def check(c, k, map):
 
 def lobcheck(c, k, map):
     """
-    Takes two lists of integers (use ord to convert bytes to integers)
-    and checks if k is the key for c. Theoretically would work for
-    hex values (0x0a instead of 10) since it's fairly pythonic, but
-    doesn't work for byte types for reasons that escape me.
+    Takes two lists of integer bytes (use ord to convert bytes to integers)
+    and decrypts c using key k. Returns a list of integers base 10.
 
-    >>> check(7, 10, map)
-    3
-    >>> check(0x7, 0xa, map)
-    3
+    >>>lobcheck([0xa2, 0xbb, 0x2a], [0x43, 0x42, 0x41], map)
+    [67, 66, 65]
     """
     rval = []
     ii = 0
@@ -56,11 +57,27 @@ def key_generator(n, charset, curl=None):
     """
     if not curl:
         curl = [[x] for x in charset]
-    else if len(curl[len(curl)-1]) >= n:
+    elif len(curl[len(curl)-1]) >= n:
         return curl
     else:
+        pass
         
+def v_freq(ct, kl):
+    """
+    Takes a ciphertext and provides a frequency table for each
+    character of the key given the proposed keylength.
 
+    >>> v_freq(['a', 'b', 'c', 'b', 'c', 'c'], 2)
+    {0: Counter({'c': 2, 'a': 1}), 1: Counter({'b': 2})}
+    """
+    frequency_map = {}
+    from collections import Counter
+    for i in range(kl):
+        curlist = [ct[i] for i in range(i, len(ct)-1, kl)]
+        frequency_map[i] = Counter(curlist)
+    return frequency_map
+        
+#xord is the ciphertext as a list of integers
 xord = []
 f = open("ciphertext1", "rb")
 while True:
@@ -69,9 +86,3 @@ while True:
         xord.append(ord(fc))
     else:
         break
-
-pskeys = [i for i in range(48, 58, 1)]
-for i in range(65, 91, 1):
-    pskeys.append(i)
-for i in range(97, 123, 1)
-
