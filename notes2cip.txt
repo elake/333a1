@@ -1,0 +1,7 @@
+bf31248c4fbdbbba3a38da130805ba2324d850f1d2f68a29d33cd80a70bbb3623dd0d5282fbf3b783c89980a5301612a233704472a860e91b9f5ba3bdf5afda9f147b2312239a5c7d3dc736f9e2292312a2324e800caa2ae80b7bda3423920bb3ad8311825b45eb5f75d2ab37b9a2338db6c1 - 2 instances, 4026 digits apart, 2013 bytes apart
+
+common characters I like:
+112, 64, 63, 55, 47 (a lot), 39 (a lot), 32, 31, 38 (most)
+
+Key so far:
+25 50 44 46 2d 31 2e 35  0d 0a 25 b5 b5 b5 b5 0d 0a 31 20 30 20 6f 62 6a  0d 0a 3c 3c 2f 54 79 70 65

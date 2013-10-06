@@ -1,0 +1,242 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="../../jkincludes/scripts.css" />
+<meta name="description" content="Click here to get free JavaScripts, hassle free!">
+<meta name="keywords"
+content="free JavaScript, cut and paste JavaScript, JavaScript tutorial">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Cut &amp; Paste Character count</title>
+</head>
+
+<body>
+
+<div>
+ <!--ZOOMSTOP-->
+
+<script type="text/javascript" src="http://www.javascriptkit.com/jkincludes/dropdowntabs.js">
+</script>
+
+
+<div id="topsection">
+
+<!--begin topbar-->
+<div id="topbar">
+<div id="toprightdiv">
+
+<form id="jksitesearch" method="get" action="http://www.javascriptkit.com/cgi-bin/search/search.cgi" class="zoom_searchform">
+<input type="text" name="zoom_query" id="zoom_query" size="20" value="Search JavaScript Kit" class="zoom_searchbox" /> 
+<input class="zoom_button" type="image" src="http://www.javascriptkit.com/jkincludes/search.gif" title="Search JK" />
+<input name="zoom_per_page" id="zoom_per_page" type="hidden" value="10" />
+<input name="zoom_and" id="zoom_and" type="hidden" value="1" />
+<input type="hidden" name="zoom_sort" value="0" />
+
+<div id="jksitesearch_cat">
+<b>Categories:</b> <input type="checkbox" name="zoom_cat[]" value="-1" id="searchall" style="margin-left: 5px" /><label for="searchall">All</label> <input type="checkbox" name="zoom_cat[]" id="javascriptssearch" value="0" /><label for="javascriptssearch">Free JS/ Applets</label> <input type="checkbox" name="zoom_cat[]" id="tutorialsearch" value="1" /><label for="tutorialsearch">Tutorials</label> <input type="checkbox" name="zoom_cat[]" id="referencesearch" value="2" /><label for="referencesearch">References</label>
+</div>
+
+</form>
+
+<script type="text/javascript">
+setdefaultcategory()
+togglecategories()
+disabledefaultsearch()
+cleardefaultdata()
+</script>
+
+</div>
+
+<a href="http://www.javascriptkit.com" title="JavaScript Kit"><img id="jklogo" src="http://www.javascriptkit.com/jkincludes/jksitelogo.gif" border="0"  alt="JavaScript Kit" /></a>
+
+
+<div id="bluemenu" class="bluetabs">
+<ul>
+<li><a href="http://www.javascriptkit.com">Home</a></li>
+<li><a href="http://www.javascriptkit.com/cutpastejava.shtml">Free JavaScripts</a></li>
+<li><a href="http://www.javascriptkit.com/javatutors/" rel="tutorialdropdown">Tutorials &#9660;</a></li>
+<li><a href="http://www.javascriptkit.com/jsref/" rel="refdropdown">References &#9660;</a></li>
+<li><a href="http://www.javascriptkit.com/java/">Applets</a></li>
+<li><a href="http://www.dynamicdrive.com/forums/forumdisplay.php?7-JavaScript">JavaScript Forums</a></li>
+<li><a href="http://www.dynamicdrive.com/style/">CSS Examples</a></li>
+</ul>
+</div>
+
+
+<!--1st drop down menu -->                                                   
+<div id="tutorialdropdown" class="dropmenudiv_b">
+<a href="http://www.javascriptkit.com/javatutors/" title="JavaScript Tutorials">JavaScript Tutorials</a>
+<a href="http://www.javascriptkit.com/dhtmltutors/" title="DHTML and CSS Tutorials">DHTML/ CSS</a>
+<a href="http://www.javascriptkit.com/howto/" title="Web Building Tutorials">Web Building Tutorials</a>
+</div>
+
+
+<!--2nd drop down menu -->                                                
+<div id="refdropdown" class="dropmenudiv_b" style="width: 150px;">
+<a href="http://www.javascriptkit.com/jsref/" title="JavaScript Reference">JS Reference</a>
+<a href="http://www.javascriptkit.com/domref/" title="DOM Reference">DOM Reference</a>
+<a href="http://www.javascriptkit.com/filters/" title="IE Filters Reference">IE Filters Reference</a>
+<a href="http://www.javascriptkit.com/dhtmltutors/cssreference.shtml" title="CSS Reference">CSS Reference</a>
+</div>
+
+<script type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("bluemenu")
+</script>
+
+</div>
+<!--end #topbar -->
+
+
+<div id="topbanner">
+<script type="text/javascript" src="http://www.javascriptkit.com/adbanner.js"></script>
+</div>
+
+</div>
+
+ <!--ZOOMRESTART-->
+</div>
+
+
+<div class="maincontainer">
+
+<div id="contentwrapper">
+<div id="middlecolumn">
+
+<p align="center"><strong><a href="http://javascriptkit.com">Home</a>
+/ <a href="http://javascriptkit.com/cutpastejava.shtml">Free
+JavaScripts</a> / <a href="http://javascriptkit.com/script/cutindex13.shtml">Forms</a>
+/ Here</strong></p>
+
+<p align="center"><em>Cut &amp; Paste</em>  Character count</p>
+<div align="center"><center>
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#E7F8ED">
+  <tr>
+    <td width="100%" id="credits"><strong>Credit: <a
+    href="http://javascriptkit.com">JavaScript Kit</a></strong></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="left"><strong>Description: </strong>Calculate
+and display the number of characters within a TEXTAREA with this script. Useful,
+for example, in helping your visitors manually keep their input length in check!</p>
+
+<p align="left"><strong>Example:</strong></p>
+
+<p align="left"><!--webbot bot="HTMLMarkup" startspan --><form method="POST">
+
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%">
+<textarea rows="12" name="charcount" cols="60" wrap="virtual"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%"><div align="right"><p><input type="button" value="Calculate Characters"
+      onClick="countit(this)"> <input type="text" name="displaycount" size="20"></p>
+      </td>
+    </tr>
+  </table>
+
+</form>
+
+<script language="JavaScript">
+
+function countit(what){
+
+//Character count script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+formcontent=what.form.charcount.value
+what.form.displaycount.value=formcontent.length
+}
+</script><!--webbot bot="HTMLMarkup" endspan -->
+</p>
+
+<p align="left"><strong>Directions: </strong>Simply
+copy everything inside and paste it where you wish the script to appear:</p>
+
+<form method="POST">
+  <p><textarea name="S1" rows="8" cols="69" style="width:90%"><form method="POST"&gt;
+
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%">
+<textarea rows="12" name="charcount" cols="60" wrap="virtual"&gt;</textarea&gt;
+      </td>
+    </tr>
+    <tr>
+      <td width="100%"><div align="right"><p><input type="button" value="Calculate Characters"
+      onClick="countit(this)"&gt; <input type="text" name="displaycount" size="20"&gt;</p>
+      <div align="center"><center><p>This free script provided by
+      <a href="http://javascriptkit.com">JavaScript
+      Kit</a></p>
+      </center></div></div></td>
+    </tr>
+  </table>
+
+</form&gt;
+
+<script language="JavaScript">
+
+function countit(what){
+
+//Character count script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+formcontent=what.form.charcount.value
+what.form.displaycount.value=formcontent.length
+}
+</script></textarea></p>
+</form>
+
+<hr width="90%" size="1" align="center">
+
+<p align="center"><script type="text/javascript"><!--
+google_ad_client = "pub-3356683755662088";
+//468x60, created 1/10/08
+google_ad_slot = "6100501018";
+google_ad_width = 468;
+google_ad_height = 60;
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+
+<p align="center"><script type="text/javascript" src="http://www.javascriptkit.com/ssireplace.js"></script>
+
+<p align="center"><font face="Arial" size="1">
+Copyright © 1997-2007 <a href="http://www.javascriptkit.com">JavaScript Kit</a>.
+NO PART may be reproduced without author's permission.</font></p>
+
+<style>
+.footad a{
+text-decoration: none;
+}
+.sponsors{
+line-height: 14px;
+font: normal 12px Arial;
+}
+
+</style>
+
+<div align="center" class="footad" style="font-size: 85%"> <a href="http://www.dynamicdrive.com/style/" target="offsite">CSS Library</a> 
+|
+  <a href="http://www.dynamicdrive.com/dynamicindex1/" target="offsite">JavaScript &amp; DHTML Menus</a> 
+  |
+  <a target="offsite" href="http://www.hostsearch.com/low_cost_web_hosting.asp">
+	Cheap Web Hosting</a> | -<a target="offsite" href="http://www.sharewareconnection.com">Software 
+	Connection</a> | <a target="offsite" href="http://www.filehungry.com">
+	Software Library</a><br>
+  <a target="offsite" href="http://bytes.com">Web Development</a> 
+  | <a target="offsite" href="http://www.bluedogink.com/">Cheap Printer Ink</a> 
+  | <a target="offsite" href="http://www.daniweb.com/forums/forum117.html">JavaScript Community</a>
+  | <a  target="offsite" href="http://www.eukhost.com">Web hosting</a></div></p>
+</body>
+</html>
